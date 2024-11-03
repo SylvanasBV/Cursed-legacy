@@ -256,11 +256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6000012
+      value: 0.60000193
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.50000036
+      value: 0.5000006
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,11 +317,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1669420239785701254, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4579141
+      value: -0.332
       objectReference: {fileID: 0}
     - target: {fileID: 1669420239785701254, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9733944
+      value: 3.027
       objectReference: {fileID: 0}
     - target: {fileID: 1669420239785701254, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -359,6 +359,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: JoungPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4379273967740945492, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85d16ec8de02c6642afb6ed263219386, type: 2}
+    - target: {fileID: 4379273967740945492, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85d16ec8de02c6642afb6ed263219386, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
