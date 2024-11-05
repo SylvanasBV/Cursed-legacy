@@ -79,6 +79,7 @@ MonoBehaviour:
   followDistance: 1
   offsetRight: {x: 0.5, y: 0.5}
   offsetLeft: {x: -0.5, y: 0.5}
+  StartPosition: 0
 --- !u!1 &184198293123001173
 GameObject:
   m_ObjectHideFlags: 0
