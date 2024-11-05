@@ -21,6 +21,7 @@ public class GhostFollow : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.Find("JoungPlayer");
         playerController = player.GetComponent<PlayerController>();
         currentOffset = offsetRight; // Iniciar con el offset a la derecha
         StartPosition = false;

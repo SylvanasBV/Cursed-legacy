@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        swordAnimator = sword.GetComponent<Animator>();
         sword = GameObject.Find("Weapon");
+        swordAnimator = sword.GetComponent<Animator>();
         sword.SetActive(false);
     }
     // Update is called once per frame
@@ -43,6 +43,11 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            swordAnimator.SetTrigger("SwordAttack1Trigger");
+        }
+
         FlipSprite();
     }
 
@@ -51,8 +56,14 @@ public class PlayerController : MonoBehaviour
     {
         // Verificar si colisiona con un objeto que tenga el tag "Enemy"
         rb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
-        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
+        if (horizontalInput != 0 && verticalInput == 0)
+        {
+            animator.SetFloat("Run_Float", Math.Abs(horizontalInput));
+        }
+        else
+        {
+            animator.SetFloat("Run_Float", Math.Abs(verticalInput));
+        }
     }
 
     void FlipSprite()
