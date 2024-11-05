@@ -1,22 +1,20 @@
 using UnityEngine;
-
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
     // Clips de música
-    public AudioClip menuMusic;        // Música para el menú principal
-    public AudioClip backgroundMusic;   // Música para los niveles
-
+    public AudioClip menuMusic;
+    public AudioClip backgroundMusic;
     // Clips de efectos de sonido
-    public AudioClip[] enemyHitSounds;  // Efectos para cuando el jugador golpea al enemigo
-    public AudioClip[] instructions;     // Instrucciones que dice el personaje en cada nivel
-    public AudioClip swordSFX;           // SFX de la espada del jugador
-
-    private AudioSource sfxSource;          // Para efectos de sonido
-    private AudioSource menuMusicSource;    // Para la música del menú
-    private AudioSource backgroundMusicSource;// Para la música de fondo
-
+    public AudioClip[] enemyHitSounds;
+    public AudioClip[] instructions;
+    public AudioClip swordSFX;
+    public AudioMixer audioMixer;
+    private AudioSource sfxSource;
+    private AudioSource menuMusicSource;
+    private AudioSource backgroundMusicSource;
     private void Awake()
     {
         if (Instance == null)
@@ -28,20 +26,32 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Obtener los AudioSources directamente desde los hijos
         menuMusicSource = transform.Find("MenuMusic").GetComponent<AudioSource>();
         backgroundMusicSource = transform.Find("BackgroundMusic").GetComponent<AudioSource>();
         sfxSource = transform.Find("SFX").GetComponent<AudioSource>();
-    }
 
+        menuMusicSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Master")[0];
+        backgroundMusicSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Master")[0];
+        sfxSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Master")[0];
+    }
     private void Start()
     {
-        // Reproducir la música del menú al iniciar
         PlayMenuMusic();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
-    // Reproduce la música del menú
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    // Reproduce la instrucción cuando se carga una escena
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name.StartsWith("Map"))
+        {
+            int levelIndex = scene.buildIndex - SceneManager.GetActiveScene().buildIndex;
+            PlayInstruction(levelIndex);
+        }
+    }
     public void PlayMenuMusic()
     {
         if (menuMusicSource.clip != menuMusic)
@@ -50,10 +60,8 @@ public class AudioManager : MonoBehaviour
             menuMusicSource.loop = true;
             menuMusicSource.Play();
         }
-        backgroundMusicSource.Stop(); // Detener la música de fondo si está sonando
+        backgroundMusicSource.Stop();
     }
-
-    // Reproduce la música de los niveles
     public void PlayBackgroundMusic()
     {
         if (backgroundMusicSource.clip != backgroundMusic)
@@ -62,23 +70,17 @@ public class AudioManager : MonoBehaviour
             backgroundMusicSource.loop = true;
             backgroundMusicSource.Play();
         }
-        menuMusicSource.Stop(); // Detener la música del menú si está sonando
+        menuMusicSource.Stop();
     }
-
-    // Reproduce un sonido específico
     public void PlaySoundEffect(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
     }
-
-    // Reproduce un sonido aleatorio cuando el jugador golpea al enemigo
     public void PlayEnemyHitSound()
     {
         int randomIndex = Random.Range(0, enemyHitSounds.Length);
         PlaySoundEffect(enemyHitSounds[randomIndex]);
     }
-
-    // Reproduce el audio del personaje en función del nivel
     public void PlayInstruction(int level)
     {
         if (level >= 0 && level < instructions.Length)
@@ -86,14 +88,11 @@ public class AudioManager : MonoBehaviour
             PlaySoundEffect(instructions[level]);
         }
     }
-
-    // Reproduce el sonido de la espada
     public void PlaySwordSFX()
     {
         PlaySoundEffect(swordSFX);
     }
 
-    // Detiene la música actual (útil para transiciones entre menú y niveles)
     public void StopBackgroundMusic()
     {
         backgroundMusicSource.Stop();
