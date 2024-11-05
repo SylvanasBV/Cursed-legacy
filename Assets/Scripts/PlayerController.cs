@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             ghostFollow.StartPosition = true;
             swordAnimator.SetBool("SwordPrepairAttack", true);
         }
-        if (collision.CompareTag("Sword"))
+        if (collision.CompareTag("SwordFloor"))
         {
             Destroy(collision.gameObject);
             sword.SetActive(true);

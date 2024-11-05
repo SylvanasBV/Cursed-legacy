@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6510550366227555599}
   - component: {fileID: 5655581096884968545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 5754854165602143813}
   - component: {fileID: 5916601551143842710}
   - component: {fileID: 4667569549040066877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sword particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5379,7 +5379,7 @@ GameObject:
   - component: {fileID: 5712259158017602166}
   - component: {fileID: 8528601186684944103}
   - component: {fileID: 4379273967740945492}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Run Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10219,7 +10219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729394494757674792}
   - component: {fileID: 1138148133893395487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10278,7 +10278,7 @@ GameObject:
   - component: {fileID: 1875860160986809865}
   - component: {fileID: 165789472776452114}
   - component: {fileID: 4158490964633357022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: JoungPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -10506,7 +10506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6620009058285015589}
   - component: {fileID: 1588827749995940040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System Force Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11037,7 +11037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1399393852392739623, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 2113732190704626696, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_Constraints

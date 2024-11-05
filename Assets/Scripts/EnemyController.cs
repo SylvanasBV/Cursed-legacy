@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float detectionRadius = 5.0f;
      [SerializeField] float speed  = 2.0f;
+    [SerializeField] int vidas;
 
      private Rigidbody2D rb;
      private Vector2 movement;
@@ -20,6 +21,8 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(vidas);
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         
         if (distanceToPlayer < detectionRadius)
@@ -40,4 +43,26 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);   
     }
+
+    private void RemoveLive()
+    {
+        if (vidas > 0)
+        {
+            vidas--;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Sword") )
+        {
+            RemoveLive();
+        } 
+    }
+
+
 }

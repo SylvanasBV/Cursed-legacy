@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Event
   - Sword
+  - SwordFloor
   layers:
   - Default
   - TransparentFX
