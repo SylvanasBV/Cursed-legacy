@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GhostFollow : MonoBehaviour
 {
@@ -14,10 +15,15 @@ public class GhostFollow : MonoBehaviour
     private PlayerController playerController;
     private Vector2 currentOffset;
     // Start is called before the first frame update
+
+    // First call of the Ghost
+    public bool StartPosition;
+
     void Start()
     {
         playerController = player.GetComponent<PlayerController>();
         currentOffset = offsetRight; // Iniciar con el offset a la derecha
+        StartPosition = false;
     }
 
     // Update is called once per frame
@@ -37,7 +43,7 @@ public class GhostFollow : MonoBehaviour
         float distance = Vector2.Distance(transform.position, targetPosition);
 
         // Mover al acompañante solo si está lejos del punto fijado
-        if (distance > followDistance)
+        if (distance > followDistance && StartPosition)
         {
             Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);

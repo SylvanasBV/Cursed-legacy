@@ -19,9 +19,14 @@ public class PlayerController : MonoBehaviour
     //Referencia texto muerte
     public GameObject deathMessage;
 
+
+    GhostFollow ghostFollow;
+    GameObject firstEnemy;
     // Start is called before the first frame update
     void Start()
     {
+        firstEnemy = GameObject.Find("Ghost");
+        ghostFollow = firstEnemy.GetComponent<GhostFollow>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sword = GameObject.Find("Weapon");
@@ -55,7 +60,20 @@ public class PlayerController : MonoBehaviour
             transform.localScale = ls;
 
 
-
         }
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Event"))
+        {
+            Debug.Log("HolaMundo");
+            ghostFollow.StartPosition = true;
+        }
+    }
+
+
+
 }
