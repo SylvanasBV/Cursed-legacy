@@ -343,7 +343,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 355591998}
   m_HandleRect: {fileID: 187264121}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 1
@@ -1730,6 +1730,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b385053e754a9c549abfe73692303ab5, type: 3}
   - {fileID: 8300000, guid: 1d8fb41ea94715642b5315f5095390a2, type: 3}
   swordSFX: {fileID: 8300000, guid: 627c5a7ef338c264493c51ed0ab39a21, type: 3}
+  audioMixer: {fileID: 24100000, guid: 2236da5d31355ec4ba3f739f294da891, type: 2}
 --- !u!1 &554972948
 GameObject:
   m_ObjectHideFlags: 0
