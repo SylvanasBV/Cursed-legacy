@@ -1,46 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostFollow : MonoBehaviour
 {
     public GameObject player;
-    public float speed;
-    public float followDistance = 1.0f; //la distancia a la que se detiene del jugador
-    public  Vector2 offsetRight = new Vector2(0.5f, 0.5f); //offset respecto al jugador
-    public  Vector2 offsetLeft = new Vector2(-0.5f, 0.5f);
+    public float followSpeed = 2f;
+    public Vector2 offsetRight = new Vector2(0.5f, 0f);
+    public Vector2 offsetLeft = new Vector2(-0.5f, 0f);
+    public float stopDistance = 0.5f; // Distancia mínima antes de empujar al jugador
 
-    
-    private PlayerController playerController;
-    private Vector2 currentOffset;
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerController = player.GetComponent<PlayerController>();
-        currentOffset = offsetRight; // Iniciar con el offset a la derecha
-    }
+    private bool isFacingRight = true;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        // Actualizar el offset según la dirección del jugador
-        if (playerController.isFacingRight)
+        // Determina hacia dónde está mirando el jugador
+        isFacingRight = player.transform.localScale.x > 0;
+
+        // Ajusta el offset en función de la dirección
+        Vector2 currentOffset = isFacingRight ? offsetRight : offsetLeft;
+        Vector2 targetPosition = (Vector2)player.transform.position + currentOffset;
+
+        // Verifica la distancia al jugador
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        // Solo sigue al jugador si está más lejos que stopDistance
+        if (distanceToPlayer > stopDistance)
         {
-            currentOffset = offsetRight;
+            // Corrige la posición del acompañante utilizando Lerp
+            transform.position = Vector2.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
         }
         else
         {
-            currentOffset = offsetLeft;
+            // Si está muy cerca, ajusta la posición sin sobreponerse
+            Vector2 newPosition = targetPosition;
+            newPosition.x = Mathf.Clamp(newPosition.x, player.transform.position.x - stopDistance, player.transform.position.x + stopDistance);
+            transform.position = newPosition;
         }
 
-        Vector2 targetPosition = (Vector2)player.transform.position + currentOffset;
-        float distance = Vector2.Distance(transform.position, targetPosition);
+        // Ajusta la escala del acompañante para que coincida con la dirección del jugador
+        transform.localScale = new Vector3(isFacingRight ? 1f : -1f, 1f, 1f); // Mirando a la derecha o izquierda
 
-        // Mover al acompañante solo si está lejos del punto fijado
-        if (distance > followDistance)
-        {
-            Vector2 direction = (targetPosition - (Vector2)transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-        }
+        // Opcional: Visualiza la posición objetivo
+        Debug.DrawLine(player.transform.position, targetPosition, Color.red);
     }
 }
