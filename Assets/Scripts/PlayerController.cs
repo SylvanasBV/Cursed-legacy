@@ -2,6 +2,8 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,17 +15,24 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     Animator animator;
+    GameObject sword;
 
     //Referencia texto muerte
     public GameObject deathMessage;
 
+
+    GhostFollow ghostFollow;
+    GameObject firstEnemy;
     // Start is called before the first frame update
     void Start()
     {
+        ghostFollow = FindObjectOfType<GhostFollow>();
+
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sword = GameObject.Find("Weapon");
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -45,12 +54,26 @@ public class PlayerController : MonoBehaviour
 
     void FlipSprite()
     {
-        if(isFacingRight && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
+        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 ls = transform.localScale;
+            Vector2 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
         }
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Event"))
+        {
+            Debug.Log("HolaMundo");
+            ghostFollow.StartPosition = true;
+        }
+    }
+
+
+
 }
