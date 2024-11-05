@@ -22,6 +22,7 @@ public class SceneController : MonoBehaviour
     public void LoadNextScene()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        AudioManager.Instance.PlayBackgroundMusic();
         // Volver al menú si estamos en el último nivel (Level3)
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
         {

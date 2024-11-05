@@ -1,16 +1,22 @@
 using UnityEngine;
+
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
+
     // Clips de música
     public AudioClip menuMusic;        // Música para el menú principal
     public AudioClip backgroundMusic;   // Música para los niveles
+
     // Clips de efectos de sonido
     public AudioClip[] enemyHitSounds;  // Efectos para cuando el jugador golpea al enemigo
-    public AudioClip[] instructions;    // Instrucciones que dice el personaje en cada nivel
-    public AudioClip swordSFX;          // SFX de la espada del jugador
-    private AudioSource audioSource;
-    private AudioSource backgroundSource;  // Para música de fondo separada
+    public AudioClip[] instructions;     // Instrucciones que dice el personaje en cada nivel
+    public AudioClip swordSFX;           // SFX de la espada del jugador
+
+    private AudioSource sfxSource;          // Para efectos de sonido
+    private AudioSource menuMusicSource;    // Para la música del menú
+    private AudioSource backgroundMusicSource;// Para la música de fondo
+
     private void Awake()
     {
         if (Instance == null)
@@ -22,44 +28,56 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        // Configura dos AudioSources, uno para la música de fondo y otro para los efectos de sonido
-        AudioSource[] sources = GetComponents<AudioSource>();
-        if (sources.Length < 2)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-            backgroundSource = gameObject.AddComponent<AudioSource>();
-        }
-        else
-        {
-            audioSource = sources[0];
-            backgroundSource = sources[1];
-        }
+
+        // Obtener los AudioSources directamente desde los hijos
+        menuMusicSource = transform.Find("MenuMusic").GetComponent<AudioSource>();
+        backgroundMusicSource = transform.Find("BackgroundMusic").GetComponent<AudioSource>();
+        sfxSource = transform.Find("SFX").GetComponent<AudioSource>();
     }
+
+    private void Start()
+    {
+        // Reproducir la música del menú al iniciar
+        PlayMenuMusic();
+    }
+
     // Reproduce la música del menú
     public void PlayMenuMusic()
     {
-        backgroundSource.clip = menuMusic;
-        backgroundSource.loop = true;
-        backgroundSource.Play();
+        if (menuMusicSource.clip != menuMusic)
+        {
+            menuMusicSource.clip = menuMusic;
+            menuMusicSource.loop = true;
+            menuMusicSource.Play();
+        }
+        backgroundMusicSource.Stop(); // Detener la música de fondo si está sonando
     }
+
     // Reproduce la música de los niveles
     public void PlayBackgroundMusic()
     {
-        backgroundSource.clip = backgroundMusic;
-        backgroundSource.loop = true;
-        backgroundSource.Play();
+        if (backgroundMusicSource.clip != backgroundMusic)
+        {
+            backgroundMusicSource.clip = backgroundMusic;
+            backgroundMusicSource.loop = true;
+            backgroundMusicSource.Play();
+        }
+        menuMusicSource.Stop(); // Detener la música del menú si está sonando
     }
+
     // Reproduce un sonido específico
     public void PlaySoundEffect(AudioClip clip)
     {
-        audioSource.PlayOneShot(clip);
+        sfxSource.PlayOneShot(clip);
     }
+
     // Reproduce un sonido aleatorio cuando el jugador golpea al enemigo
     public void PlayEnemyHitSound()
     {
         int randomIndex = Random.Range(0, enemyHitSounds.Length);
         PlaySoundEffect(enemyHitSounds[randomIndex]);
     }
+
     // Reproduce el audio del personaje en función del nivel
     public void PlayInstruction(int level)
     {
@@ -68,14 +86,16 @@ public class AudioManager : MonoBehaviour
             PlaySoundEffect(instructions[level]);
         }
     }
+
     // Reproduce el sonido de la espada
     public void PlaySwordSFX()
     {
         PlaySoundEffect(swordSFX);
     }
+
     // Detiene la música actual (útil para transiciones entre menú y niveles)
     public void StopBackgroundMusic()
     {
-        backgroundSource.Stop();
+        backgroundMusicSource.Stop();
     }
 }
