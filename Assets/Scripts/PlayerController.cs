@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     Animator animator;
+    GameObject sword;
 
     //Referencia texto muerte
     public GameObject deathMessage;
@@ -22,8 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sword = GameObject.Find("Weapon");
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -45,12 +46,16 @@ public class PlayerController : MonoBehaviour
 
     void FlipSprite()
     {
-        if(isFacingRight && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
+        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
+            Vector3 lsWeapon = transform.localScale;
+
             ls.x *= -1f;
+            lsWeapon.y *= -1f;
             transform.localScale = ls;
+            sword.transform.localScale = new Vector3 (1,lsWeapon.y,0);
         }
     }
 }

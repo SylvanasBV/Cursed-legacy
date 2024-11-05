@@ -10277,6 +10277,7 @@ GameObject:
   - component: {fileID: 4427929616243281361}
   - component: {fileID: 1875860160986809865}
   - component: {fileID: 165789472776452114}
+  - component: {fileID: 4158490964633357022}
   m_Layer: 0
   m_Name: JoungPlayer
   m_TagString: Player
@@ -10446,6 +10447,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4158490964633357022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3758732486828105869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840d16e755c5a1943a7ff4e32add052e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: 0
+  verticalInput: 0
+  isFacingRight: 1
+  rb: {fileID: 0}
+  deathMessage: {fileID: 0}
 --- !u!1 &7750340663356607393
 GameObject:
   m_ObjectHideFlags: 0
@@ -11032,10 +11050,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1399393852392739623, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4149897280994255009}
   m_SourcePrefab: {fileID: 100100000, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
 --- !u!4 &1093285626029619245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
   m_PrefabInstance: {fileID: 8606750730906806333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7213349861154143002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1399393852392739623, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
+  m_PrefabInstance: {fileID: 8606750730906806333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1773428102 &4149897280994255009
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7213349861154143002}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: -0.24000001, y: 0.15399992, z: 0}
+  m_RotationAtRest: {x: 0, y: 0, z: 89.77086}
+  m_TranslationOffsets:
+  - {x: -0.24000001, y: 0.15400028, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 89.77087}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 0
+  m_Sources:
+  - sourceTransform: {fileID: 1729394494757674792}
+    weight: 1
