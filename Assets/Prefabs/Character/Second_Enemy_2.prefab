@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 1614249206110660111}
   - component: {fileID: 1324782482514071019}
   - component: {fileID: 4293812329420716083}
+  - component: {fileID: 4299900343617894605}
   m_Layer: 0
   m_Name: Second_Enemy_2
   m_TagString: Untagged
@@ -708,6 +709,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4299900343617894605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5613858931090370956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d52c211b8115474aa8ebdefed50ec64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  detectionRadius: 5
+  speed: 2
 --- !u!1 &7323171153293852183
 GameObject:
   m_ObjectHideFlags: 0
