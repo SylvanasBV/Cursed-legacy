@@ -10225,7 +10225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1729394494757674792
 Transform:
   m_ObjectHideFlags: 0
@@ -11034,6 +11034,10 @@ PrefabInstance:
     - target: {fileID: 1399393852392739623, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_Name
       value: IronSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399393852392739623, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 2113732190704626696, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_Constraints

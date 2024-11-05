@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     Animator animator;
+    Animator swordAnimator;
     GameObject sword;
 
     //Referencia texto muerte
@@ -31,7 +32,9 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        swordAnimator = sword.GetComponent<Animator>();
         sword = GameObject.Find("Weapon");
+        sword.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -69,10 +72,18 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Event"))
         {
-            Debug.Log("HolaMundo");
             ghostFollow.StartPosition = true;
+            swordAnimator.SetBool("SwordPrepairAttack", true);
+        }
+        if (collision.CompareTag("Sword"))
+        {
+            Destroy(collision.gameObject);
+            sword.SetActive(true);
         }
     }
+
+
+
 
 
 
