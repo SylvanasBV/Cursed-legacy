@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -49,14 +50,12 @@ public class PlayerController : MonoBehaviour
         if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 ls = transform.localScale;
-            Vector3 lsWeapon = sword.transform.localScale;
-
+            Vector2 ls = transform.localScale;
             ls.x *= -1f;
-            lsWeapon.y -= 1f;
-
             transform.localScale = ls;
-            sword.transform.localScale = new Vector3 (1,lsWeapon.y,0);
+
+
+
         }
     }
 }
