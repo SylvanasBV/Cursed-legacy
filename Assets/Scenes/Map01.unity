@@ -748,22 +748,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1093285626029619245, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093285626029619245, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1540003
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093285626029619245, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70851845
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093285626029619245, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.70569235
-      objectReference: {fileID: 0}
     - target: {fileID: 1669420239785701254, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.18
@@ -807,10 +791,6 @@ PrefabInstance:
     - target: {fileID: 3758732486828105869, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_Name
       value: JoungPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149897280994255009, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

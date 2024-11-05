@@ -11045,11 +11045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.24000001
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.15400028
+      value: 0.1540003
       objectReference: {fileID: 0}
     - target: {fileID: 8673215229578022928, guid: 37c205e58f801f241a767f80c8a6625e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11108,7 +11108,7 @@ ParentConstraint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7213349861154143002}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: -0.24000001, y: 0.15399992, z: 0}
