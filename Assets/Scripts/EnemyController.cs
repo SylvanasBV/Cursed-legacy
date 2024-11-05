@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         if (distanceToPlayer < detectionRadius)
         {
             Vector2 direction = (player.position - transform.position).normalized;
-            movement = new Vector2(direction.x, 0); 
+            movement = new Vector2(direction.x, direction.y); 
         }else
         {
             movement = Vector2.zero;
