@@ -50,10 +50,11 @@ public class PlayerController : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
-            Vector3 lsWeapon = transform.localScale;
+            Vector3 lsWeapon = sword.transform.localScale;
 
             ls.x *= -1f;
-            lsWeapon.y *= -1f;
+            lsWeapon.y -= 1f;
+
             transform.localScale = ls;
             sword.transform.localScale = new Vector3 (1,lsWeapon.y,0);
         }
