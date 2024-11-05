@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,8 +26,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firstEnemy = GameObject.Find("Ghost");
-        ghostFollow = firstEnemy.GetComponent<GhostFollow>();
+        ghostFollow = FindObjectOfType<GhostFollow>();
+
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sword = GameObject.Find("Weapon");
@@ -58,8 +60,6 @@ public class PlayerController : MonoBehaviour
             Vector2 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
-
-
         }
     }
 
