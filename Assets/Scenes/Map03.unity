@@ -5367,6 +5367,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 592445963}
     - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: vidas
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 592445963}
@@ -10447,6 +10451,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 592445963}
     - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: vidas
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 592445963}
@@ -10480,7 +10488,7 @@ MonoBehaviour:
   player: {fileID: 592445963}
   detectionRadius: 4.58
   speed: 3
-  vidas: 0
+  vidas: 7
 --- !u!1001 &1025633656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10633,6 +10641,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: vidas
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 592445963}
@@ -10666,7 +10678,7 @@ MonoBehaviour:
   player: {fileID: 592445963}
   detectionRadius: 4.58
   speed: 3
-  vidas: 0
+  vidas: 7
 --- !u!1 &1173914947
 GameObject:
   m_ObjectHideFlags: 0
@@ -10933,7 +10945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4908216817060968537, guid: bbd6fc3b4df032a42a8166aafc4ae7cd, type: 3}
       propertyPath: vidas
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4908216817060968537, guid: bbd6fc3b4df032a42a8166aafc4ae7cd, type: 3}
       propertyPath: player
