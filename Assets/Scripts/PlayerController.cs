@@ -21,8 +21,9 @@ public class PlayerController : MonoBehaviour
     public GameObject[] RelicLevel;
     ParticleSystem playerParticleAttack;
     public Collider2D rangoCollider;
-    GameObject poisonPrefab;
     Animator poisonAnimator;
+    ParticleSystem poisonParticle;
+
 
 
     public HealthBar healthBar; // Referencia al script de la barra de salud
@@ -39,8 +40,6 @@ public class PlayerController : MonoBehaviour
     {
         ghostFollow = FindObjectOfType<GhostFollow>();
 
-        poisonPrefab = GameObject.Find("LifePotion");
-        poisonAnimator = poisonPrefab.GetComponent<Animator>();
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -177,9 +176,14 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("Poison"))
         {
-            //poisonAnimator.set
-            
+            // Usa "gameObject" en lugar de "GameObject"
+            poisonAnimator = collision.gameObject.GetComponent<Animator>();
+            poisonParticle = collision.gameObject.GetComponentInChildren<ParticleSystem>();
 
+            poisonParticle.Stop();
+            poisonAnimator.SetBool("Destory_Potion_Bool", true);
+            GiveHealth(10f);
+            
         }
     }
 
@@ -204,10 +208,10 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 0f; // Detiene el tiempo (el juego se pausa)
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         // Verifica si el objeto con el que colisiona tiene el tag "Enemy"
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Colisión con enemigo detectada.");
             TakeDamage(10f); // Llama a TakeDamage cuando se colisiona con un enemigo
@@ -224,5 +228,19 @@ public class PlayerController : MonoBehaviour
         {
             Die();  // Llama a la función que maneja la muerte
         }
-    }    
+    }
+
+    void GiveHealth(float health)
+    {
+        Debug.Log("Salud actual: " + currentHealth);
+
+        if (currentHealth == 100f)
+        {
+            currentHealth += 0f;
+        }
+        else
+        {
+            currentHealth += health;
+        }
+    }
 }

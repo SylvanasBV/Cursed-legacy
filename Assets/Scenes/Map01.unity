@@ -430,10 +430,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LifePotion
       objectReference: {fileID: 0}
-    - target: {fileID: 2358358304710684264, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
-      propertyPath: m_TagString
-      value: Poison
-      objectReference: {fileID: 0}
     - target: {fileID: 7494720071824771820, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -879,6 +875,18 @@ PrefabInstance:
     - target: {fileID: 2358358304710684264, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
       propertyPath: m_TagString
       value: Poison
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361763686715801041, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
+      propertyPath: m_Size.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361763686715801041, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361763686715801041, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7494720071824771820, guid: d21d8499ebf0b8e4aa2fb475a46b5f69, type: 3}
       propertyPath: m_LocalPosition.x

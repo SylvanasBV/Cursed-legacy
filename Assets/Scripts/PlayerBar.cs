@@ -26,6 +26,17 @@ public class PlayerBar : MonoBehaviour
         UpdateHealthBar(); // Actualiza la barra de salud
     }
 
+    public void GiveHealt(float health)
+    {
+        currentHealth += health;
+        if (currentHealth < 0f)
+        {
+            currentHealth = 0f; // Asegura que la salud no sea negativa
+        }
+
+        UpdateHealthBar(); // Actualiza la barra de salud
+    }
+
     // Actualiza la barra de salud
     private void UpdateHealthBar()
     {
@@ -45,4 +56,14 @@ public class PlayerBar : MonoBehaviour
             TakeDamage(10f); // Reduce la salud al colisionar con un enemigo
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Poison"))
+        {
+            GiveHealt(10f); // incrementa la salud al colisionar con un enemigo
+        }
+    }
+
 }     
