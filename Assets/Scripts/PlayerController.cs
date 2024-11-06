@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Ejecutando ParticleSystem.");
                 playerParticleAttack.Play();
+                AudioManager.Instance.PlaySwordSFX();
                 rangoCollider.enabled = !rangoCollider.enabled;
             }
             else

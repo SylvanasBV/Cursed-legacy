@@ -51,6 +51,7 @@ public class EnemyController : MonoBehaviour
         if (vidas > 0)
         {
             vidas--;
+            AudioManager.Instance.PlayEnemyHitSound();
         }
         else
         {
