@@ -575,22 +575,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 55012425725793396, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 55012425725793396, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505669131558411755, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2484708251384197294, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3118595163515330995, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
@@ -631,38 +615,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4007928033806194968, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007928033806194968, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214744444831820752, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380022845176928836, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380022845176928836, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380022845176928836, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: SizeModule.separateAxes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380022845176928836, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: ShapeModule.m_Position.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380022845176928836, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: ShapeModule.m_Position.y
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 4393144040015428520, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
       propertyPath: m_Name
       value: OldPlayer
@@ -671,10 +623,6 @@ PrefabInstance:
       propertyPath: RelicLevel.Array.data[0]
       value: 
       objectReference: {fileID: 495113039}
-    - target: {fileID: 6723279811015442369, guid: 301f125db3d86024eaea439fb9a0d82d, type: 3}
-      propertyPath: m_TagString
-      value: Sword
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -5655,6 +5655,7 @@ MonoBehaviour:
   rb: {fileID: 6071453014542260699}
   RelicLevel:
   - {fileID: 0}
+  rangoCollider: {fileID: 1505669131558411755}
   healthBar: {fileID: 0}
   deathMessage: {fileID: 0}
   maxHealth: 100
@@ -5686,7 +5687,7 @@ Transform:
   m_GameObject: {fileID: 5122261338497954062}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.71327287, w: 0.7008865}
-  m_LocalPosition: {x: 0.1024171, y: -0.9647958, z: -0.01}
+  m_LocalPosition: {x: 0.05, y: 0.72, z: -0.01}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6330,9 +6331,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 0
     donutRadius: 0.2
-    m_Position: {x: 0.92, y: 0.07, z: 0}
+    m_Position: {x: 0.01, y: 0.01, z: 0}
     m_Rotation: {x: 0, y: -0.3, z: 268.36}
-    m_Scale: {x: 0.23, y: 0.29, z: 1.1}
+    m_Scale: {x: 0.13, y: 0.14, z: 1.1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -11035,6 +11036,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8007550753516622434}
     m_Modifications:
+    - target: {fileID: 559752714798248603, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 559752714798248603, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1395745053708377520, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.14400005
@@ -11075,9 +11084,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.598
       objectReference: {fileID: 0}
+    - target: {fileID: 1432958026537319172, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2701211309470307905, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4429873109155319103, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6506073082667669806, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
       propertyPath: m_Name
       value: Old_Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506073082667669806, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096614337919047292, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096614337919047292, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096614337919047292, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096614337919047292, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8096614337919047292, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11090,5 +11135,10 @@ PrefabInstance:
 --- !u!4 &1466338503561952095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1395745053708377520, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
+  m_PrefabInstance: {fileID: 506608377581954799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1505669131558411755 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1432958026537319172, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
   m_PrefabInstance: {fileID: 506608377581954799}
   m_PrefabAsset: {fileID: 0}
