@@ -9,6 +9,7 @@ TagManager:
   - SwordFloor
   - Relic
   - Enemy
+  - Poison
   layers:
   - Default
   - TransparentFX

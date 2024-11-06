@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public GameObject[] RelicLevel;
     ParticleSystem playerParticleAttack;
     public Collider2D rangoCollider;
+    GameObject poisonPrefab;
+    Animator poisonAnimator;
 
 
     public HealthBar healthBar; // Referencia al script de la barra de salud
@@ -36,6 +38,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         ghostFollow = FindObjectOfType<GhostFollow>();
+
+        poisonPrefab = GameObject.Find("LifePotion");
+        poisonAnimator = poisonPrefab.GetComponent<Animator>();
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -169,9 +174,16 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if (collision.CompareTag("Poison"))
+        {
+            //poisonAnimator.set
+            
+
+        }
     }
 
-        void Die()
+    void Die()
     {
         // Desactivar al jugador
         gameObject.SetActive(false);
