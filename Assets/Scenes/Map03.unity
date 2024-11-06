@@ -660,6 +660,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886834226017673863, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6330080451463228101, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: vidas
       value: 6
@@ -1084,6 +1088,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886834226017673863, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6330080451463228101, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: vidas
       value: 6
@@ -1334,6 +1342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886834226017673863, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6400435582117817088, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: speed
       value: 5
@@ -1551,6 +1563,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2363766904662974409, guid: bbd6fc3b4df032a42a8166aafc4ae7cd, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3368590966781829217, guid: bbd6fc3b4df032a42a8166aafc4ae7cd, type: 3}
       propertyPath: m_Name
       value: Third_Enemy_1
@@ -1829,6 +1845,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5886834226017673863, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032238630568072691, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: m_Name
       value: Third_Enemy_2
@@ -1959,6 +1979,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 592445963}
+    - target: {fileID: 5886834226017673863, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032238630568072691, guid: c9c267d175229dd4b84af8c16a986613, type: 3}
       propertyPath: m_Name
       value: Third_Enemy_2
