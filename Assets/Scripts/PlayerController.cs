@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     Animator swordAnimator;
     GameObject sword;
     public GameObject[] RelicLevel;
+    ParticleSystem playerParticleAttack;
+    public Collider2D rangoCollider;
+
 
     public HealthBar healthBar; // Referencia al script de la barra de salud
     public GameObject deathMessage; // Referencia al mensaje de muerte (imagen en el Canvas)
@@ -39,6 +42,19 @@ public class PlayerController : MonoBehaviour
         sword = GameObject.Find("Weapon");
         swordAnimator = sword.GetComponent<Animator>();
         sword.SetActive(false);
+
+        // Intentamos asignar el ParticleSystem desde "Old_Weapon"
+        GameObject weapon = GameObject.Find("OldPlayer/SworsPack/Weapon/Old_Weapon");
+        if (weapon != null)
+        {
+            playerParticleAttack = weapon.transform.Find("Particle System")?.GetComponent<ParticleSystem>();
+            if (playerParticleAttack == null)
+                Debug.LogWarning("No se encontró el Particle System en Old_Weapon.");
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el objeto Old_Weapon.");
+        }
 
         // Inicializamos la salud del jugador
         currentHealth = maxHealth;
@@ -73,6 +89,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             swordAnimator.SetTrigger("SwordAttack1Trigger");
+            // Verificar si playerParticleAttack está asignado y luego reproducirlo
+            if (playerParticleAttack != null)
+            {
+                Debug.Log("Ejecutando ParticleSystem.");
+                playerParticleAttack.Play();
+                rangoCollider.enabled = !rangoCollider.enabled;
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró el ParticleSystem para ejecutar.");
+            }
         }
 
         FlipSprite();
