@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     Animator swordAnimator;
     GameObject sword;
-    public GameObject RelicLevel;
+    public GameObject[] RelicLevel;
 
     //Referencia texto muerte
     public GameObject deathMessage;
@@ -101,12 +101,17 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("Relic"))
         {
-            if (RelicLevel != null)
-            {
-                RelicLevel.GetComponent<Animator>().SetBool("Destroy_Hex_Bool", true);
-                RelicLevel.GetComponentInChildren<ParticleSystem>().Stop();
+            for (int i = 0; i <= RelicLevel.Length; i++)
+                if (RelicLevel != null && collision.gameObject.CompareTag("Relic") == RelicLevel[i])
+                {
+                    RelicLevel[i].GetComponent<Animator>().SetBool("Destroy_Hex_Bool", true);
+                    RelicLevel[i].GetComponentInChildren<ParticleSystem>().Stop();
 
-            }
+                }
+                else
+                {
+                    Debug.Log("No encontrado");
+                }
         }
     }
 

@@ -61,7 +61,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Second_Enemy_1_Run_Bool
+    m_ConditionEvent: First_Enemy_Run_Bool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3120220022065098095}
@@ -86,7 +86,7 @@ AnimatorController:
   m_Name: Second_Enemy_1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Second_Enemy_1_Run_Bool
+  - m_Name: First_Enemy_Run_Bool
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -141,7 +141,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Second_Enemy_1_Run_Bool
+    m_ConditionEvent: First_Enemy_Run_Bool
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4764072568263339768}
