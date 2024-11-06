@@ -4854,9 +4854,11 @@ GameObject:
   - component: {fileID: 4389895355079406317}
   - component: {fileID: 4752662771783665927}
   - component: {fileID: 7316014273715818559}
+  - component: {fileID: 6330080451463228101}
+  - component: {fileID: 6400435582117817088}
   m_Layer: 0
   m_Name: Third_Enemy_2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5000,7 +5002,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &7316014273715818559
 Animator:
   serializedVersion: 5
@@ -5022,6 +5024,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6330080451463228101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032238630568072691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d52c211b8115474aa8ebdefed50ec64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  detectionRadius: 4.58
+  speed: 3
+  vidas: 6
+--- !u!114 &6400435582117817088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7032238630568072691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d52c211b8115474aa8ebdefed50ec64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  detectionRadius: 4.58
+  speed: 3
+  vidas: 0
 --- !u!1 &7379538331691648083
 GameObject:
   m_ObjectHideFlags: 0
