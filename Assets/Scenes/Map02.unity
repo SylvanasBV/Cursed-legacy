@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second_Enemy_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7687413072036913386, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.55452585
@@ -435,6 +439,10 @@ PrefabInstance:
     - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_Name
       value: Second_Enemy_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7687413072036913386, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -627,14 +635,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1614249206110660111, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
-      propertyPath: vidas
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: player
       value: 
@@ -642,6 +642,10 @@ PrefabInstance:
     - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_Name
       value: Second_Enemy_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7687413072036913386, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,6 +772,10 @@ PrefabInstance:
     - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_Name
       value: Second_Enemy_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613858931090370956, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7687413072036913386, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1058,6 +1066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second_Enemy_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7200736829487203627, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5307622742630608097, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
     m_RemovedGameObjects: []
@@ -1297,6 +1309,10 @@ PrefabInstance:
     - target: {fileID: 7200736829487203627, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
       propertyPath: m_Name
       value: Second_Enemy_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200736829487203627, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
