@@ -11,27 +11,29 @@ public class EnemyController : MonoBehaviour
 
      private Rigidbody2D rb;
      private Vector2 movement;
+    private Animator animator;
      
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(vidas);
-
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         
         if (distanceToPlayer < detectionRadius)
         {
             Vector2 direction = (player.position - transform.position).normalized;
             movement = new Vector2(direction.x, direction.y); 
+            animator.SetBool("First_Enemy_Run_Bool",true);
         }else
         {
             movement = Vector2.zero;
+            animator.SetBool("First_Enemy_Run_Bool", false);
         }
 
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);

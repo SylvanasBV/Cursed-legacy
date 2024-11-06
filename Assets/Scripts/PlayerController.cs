@@ -13,10 +13,15 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed = 5f;
     public bool isFacingRight = true;
 
+
+
     public Rigidbody2D rb;
+
+
     Animator animator;
     Animator swordAnimator;
     GameObject sword;
+    public GameObject RelicLevel;
 
     //Referencia texto muerte
     public GameObject deathMessage;
@@ -30,11 +35,13 @@ public class PlayerController : MonoBehaviour
         ghostFollow = FindObjectOfType<GhostFollow>();
 
 
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sword = GameObject.Find("Weapon");
         swordAnimator = sword.GetComponent<Animator>();
         sword.SetActive(false);
+
     }
     // Update is called once per frame
     void Update()
@@ -90,6 +97,16 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             sword.SetActive(true);
+        }
+
+        if (collision.CompareTag("Relic"))
+        {
+            if (RelicLevel != null)
+            {
+                RelicLevel.GetComponent<Animator>().SetBool("Destroy_Hex_Bool", true);
+                RelicLevel.GetComponentInChildren<ParticleSystem>().Stop();
+
+            }
         }
     }
 
