@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Relic"))
         {
             for (int i = 0; i <= RelicLevel.Length; i++)
-                if (RelicLevel != null && collision.gameObject.CompareTag("Relic") == RelicLevel[i])
+                if (RelicLevel != null && collision.CompareTag("Relic") == RelicLevel[i])
                 {
                     RelicLevel[i].GetComponent<Animator>().SetBool("Destroy_Hex_Bool", true);
                     RelicLevel[i].GetComponentInChildren<ParticleSystem>().Stop();
