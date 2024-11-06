@@ -577,7 +577,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SwordFloor
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1432958026537319172, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6115016527800019759, guid: 92841863a3c1faf42a3d82ba2873aa1d, type: 3}
     m_AddedGameObjects: []
