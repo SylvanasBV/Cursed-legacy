@@ -102,7 +102,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
+  emitterVelocityMode: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -11034,6 +11034,10 @@ PrefabInstance:
     - target: {fileID: 2980157088428134705, guid: e546de2d12daf2940ae2970c166df898, type: 3}
       propertyPath: m_Name
       value: Adult_Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980157088428134705, guid: e546de2d12daf2940ae2970c166df898, type: 3}
+      propertyPath: m_TagString
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 5310418624990589844, guid: e546de2d12daf2940ae2970c166df898, type: 3}
       propertyPath: m_LocalPosition.x

@@ -224,6 +224,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1614249206110660111, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: player
       value: 
@@ -342,6 +346,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1614249206110660111, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: player
       value: 
@@ -407,9 +415,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 398432433667910496, guid: dd152afd82b4f1b4cbfa15aad1abd828, type: 3}
-      propertyPath: emitterVelocityMode
-      value: 0
+    - target: {fileID: 321244637900166802, guid: dd152afd82b4f1b4cbfa15aad1abd828, type: 3}
+      propertyPath: m_Name
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 1407841669651526366, guid: dd152afd82b4f1b4cbfa15aad1abd828, type: 3}
       propertyPath: m_Name
@@ -529,6 +537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1614249206110660111, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: player
       value: 
@@ -590,6 +602,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1614249206110660111, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4299900343617894605, guid: fd94544e6e02f2b49a1533383bd55839, type: 3}
       propertyPath: player
       value: 
@@ -874,6 +890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Second_Enemy_1
       objectReference: {fileID: 0}
+    - target: {fileID: 7473182515244861985, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1071,6 +1091,10 @@ PrefabInstance:
     - target: {fileID: 7200736829487203627, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
       propertyPath: m_Name
       value: Second_Enemy_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7473182515244861985, guid: 376514a7db8428641b1cd91f725b3f31, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
