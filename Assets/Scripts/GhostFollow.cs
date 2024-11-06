@@ -12,7 +12,7 @@ public class GhostFollow : MonoBehaviour
     public  Vector2 offsetLeft = new Vector2(-0.5f, 0.5f);
 
     
-    private PlayerController playerController;
+    PlayerController playerController;
     private Vector2 currentOffset;
     // Start is called before the first frame update
 
@@ -21,7 +21,6 @@ public class GhostFollow : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.Find("JoungPlayer");
         playerController = player.GetComponent<PlayerController>();
         currentOffset = offsetRight; // Iniciar con el offset a la derecha
         StartPosition = false;

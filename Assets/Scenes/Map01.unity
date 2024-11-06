@@ -174,14 +174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Primera_Relique
       objectReference: {fileID: 0}
-    - target: {fileID: 4288084967692465537, guid: 510f8d3e06cfcec439892cc81b22c41f, type: 3}
-      propertyPath: m_Size.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288084967692465537, guid: 510f8d3e06cfcec439892cc81b22c41f, type: 3}
-      propertyPath: m_Size.y
-      value: 1.6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -421,6 +413,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1000970878}
   zOffset: -10
+--- !u!1 &208888115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3758732486828105869, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
+  m_PrefabInstance: {fileID: 1360759235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &625660727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4141,6 +4138,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738573616026110022, guid: fcf480f6ef4af454dafe0cd9bf7b853a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 208888115}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4198,6 +4199,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JoungPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4158490964633357022, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
+      propertyPath: RelicLevel
+      value: 
+      objectReference: {fileID: 1878049185}
     - target: {fileID: 7213349861154143002, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
       propertyPath: m_TagString
       value: Sword
@@ -4207,6 +4212,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb186790cd28d204ca214c10560e49e7, type: 3}
+--- !u!1 &1878049185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4002392030160619505, guid: 510f8d3e06cfcec439892cc81b22c41f, type: 3}
+  m_PrefabInstance: {fileID: 33613876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1919678304584868362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4258,10 +4268,6 @@ PrefabInstance:
     - target: {fileID: 7099087216485264128, guid: 4887e6e48781e904d82834f5454407c1, type: 3}
       propertyPath: m_Name
       value: First_Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7099087216485264128, guid: 4887e6e48781e904d82834f5454407c1, type: 3}
-      propertyPath: m_TagString
-      value: SwordFloor
       objectReference: {fileID: 0}
     - target: {fileID: 8701905077082891617, guid: 4887e6e48781e904d82834f5454407c1, type: 3}
       propertyPath: player
