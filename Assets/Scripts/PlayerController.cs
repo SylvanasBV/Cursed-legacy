@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     ParticleSystem poisonParticle;
 
 
-
     public HealthBar healthBar; // Referencia al script de la barra de salud
     public GameObject deathMessage; // Referencia al mensaje de muerte (imagen en el Canvas)
 
@@ -52,6 +51,7 @@ public class PlayerController : MonoBehaviour
         if (weapon != null)
         {
             playerParticleAttack = weapon.transform.Find("Particle System")?.GetComponent<ParticleSystem>();
+            rangoCollider = weapon.GetComponent<Collider2D>();
             if (playerParticleAttack == null)
                 Debug.LogWarning("No se encontró el Particle System en Old_Weapon.");
         }
@@ -98,8 +98,9 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Ejecutando ParticleSystem.");
                 playerParticleAttack.Play();
-                AudioManager.Instance.PlaySwordSFX();
-                rangoCollider.enabled = !rangoCollider.enabled;
+                //AudioManager.Instance.PlaySwordSFX();
+                rangoCollider.enabled = true; 
+
             }
             else
             {
@@ -121,6 +122,7 @@ public class PlayerController : MonoBehaviour
     //Collision con el enmigo 
     private void FixedUpdate()
     {
+        rangoCollider.enabled = false;
         // Verificar si colisiona con un objeto que tenga el tag "Enemy"
         rb.velocity = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed);
         if (horizontalInput != 0 && verticalInput == 0)
